@@ -13,7 +13,7 @@ export class SchedulerService {
         this.logger = new Logger(SchedulerService.name);
     }
 
-    @Cron(CronExpression.EVERY_30_MINUTES)
+    @Cron(CronExpression.EVERY_12_HOURS)
     async handleCron() {
 
         this.logger.debug(`${this.handleCron.name}: Running scheduled task...`);

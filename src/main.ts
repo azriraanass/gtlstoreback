@@ -1,12 +1,14 @@
 // main.ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { INestApplication } from '@nestjs/common';
+import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { SpelunkerModule } from 'nestjs-spelunker';
 import * as fs from 'fs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  
+  app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 
   void generateDependencyGraph(app);
 

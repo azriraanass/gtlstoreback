@@ -1,71 +1,131 @@
 graph LR
   AppModule-->AuthenticationModule
+  AppModule-->ChatbotModule
   AppModule-->ConfigHostModule
   AppModule-->ConfigModule
-  AppModule-->ProductsModule
+  AppModule-->EventEmitterModule
+  AppModule-->LaptopFinderModule
+  AppModule-->OllamaModule
+  AppModule-->QdrantModule
+  AppModule-->RagModule
   AppModule-->ScheduleModule
   AppModule-->SchedulerModule
   AppModule-->TypeOrmCoreModule
   AppModule-->TypeOrmModule
   AuthenticationModule-->ConfigHostModule
   AuthenticationModule-->ConfigModule
+  AuthenticationModule-->EventEmitterModule
   AuthenticationModule-->JwtModule
   AuthenticationModule-->ScheduleModule
   AuthenticationModule-->TypeOrmCoreModule
   AuthenticationModule-->UsersModule
   CategoryModule-->ConfigHostModule
   CategoryModule-->ConfigModule
+  CategoryModule-->EventEmitterModule
   CategoryModule-->ScheduleModule
   CategoryModule-->TypeOrmCoreModule
   CategoryModule-->TypeOrmModule
+  ChatbotModule-->ConfigHostModule
+  ChatbotModule-->ConfigModule
+  ChatbotModule-->EventEmitterModule
+  ChatbotModule-->GroqModule
+  ChatbotModule-->ScheduleModule
+  ChatbotModule-->TypeOrmCoreModule
   ConfigHostModule-->ConfigModule
+  ConfigHostModule-->EventEmitterModule
   ConfigHostModule-->ScheduleModule
   ConfigHostModule-->TypeOrmCoreModule
   ConfigModule-->ConfigHostModule
+  ConfigModule-->EventEmitterModule
   ConfigModule-->ScheduleModule
   ConfigModule-->TypeOrmCoreModule
   DiscoveryModule-->ConfigHostModule
   DiscoveryModule-->ConfigModule
+  DiscoveryModule-->EventEmitterModule
   DiscoveryModule-->ScheduleModule
   DiscoveryModule-->TypeOrmCoreModule
+  EventEmitterModule-->ConfigHostModule
+  EventEmitterModule-->ConfigModule
+  EventEmitterModule-->DiscoveryModule
+  EventEmitterModule-->ScheduleModule
+  EventEmitterModule-->TypeOrmCoreModule
+  GroqModule-->ConfigHostModule
+  GroqModule-->ConfigModule
+  GroqModule-->EventEmitterModule
+  GroqModule-->ScheduleModule
+  GroqModule-->TypeOrmCoreModule
   JwtModule-->ConfigHostModule
   JwtModule-->ConfigModule
+  JwtModule-->EventEmitterModule
   JwtModule-->ScheduleModule
   JwtModule-->TypeOrmCoreModule
+  LaptopFinderModule-->ConfigHostModule
+  LaptopFinderModule-->ConfigModule
+  LaptopFinderModule-->EventEmitterModule
+  LaptopFinderModule-->ProductsModule
+  LaptopFinderModule-->ScheduleModule
+  LaptopFinderModule-->TypeOrmCoreModule
+  LaptopFinderModule-->WoocommerceModule
+  OllamaModule-->ConfigHostModule
+  OllamaModule-->ConfigModule
+  OllamaModule-->EventEmitterModule
+  OllamaModule-->ScheduleModule
+  OllamaModule-->TypeOrmCoreModule
   ProductsModule-->ConfigHostModule
   ProductsModule-->ConfigModule
+  ProductsModule-->EventEmitterModule
   ProductsModule-->ScheduleModule
   ProductsModule-->TypeOrmCoreModule
   ProductsModule-->TypeOrmModule
+  QdrantModule-->ConfigHostModule
+  QdrantModule-->ConfigModule
+  QdrantModule-->EventEmitterModule
+  QdrantModule-->ScheduleModule
+  QdrantModule-->TypeOrmCoreModule
+  RagModule-->ConfigHostModule
+  RagModule-->ConfigModule
+  RagModule-->EventEmitterModule
+  RagModule-->OllamaModule
+  RagModule-->ProductsModule
+  RagModule-->QdrantModule
+  RagModule-->ScheduleModule
+  RagModule-->TypeOrmCoreModule
   ScheduleModule-->ConfigHostModule
   ScheduleModule-->ConfigModule
   ScheduleModule-->DiscoveryModule
+  ScheduleModule-->EventEmitterModule
   ScheduleModule-->TypeOrmCoreModule
   SchedulerModule-->ConfigHostModule
   SchedulerModule-->ConfigModule
+  SchedulerModule-->EventEmitterModule
   SchedulerModule-->ScheduleModule
   SchedulerModule-->SyncModule
   SchedulerModule-->TypeOrmCoreModule
   SyncModule-->CategoryModule
   SyncModule-->ConfigHostModule
   SyncModule-->ConfigModule
+  SyncModule-->EventEmitterModule
   SyncModule-->ProductsModule
   SyncModule-->ScheduleModule
   SyncModule-->TypeOrmCoreModule
   SyncModule-->WoocommerceModule
   TypeOrmCoreModule-->ConfigHostModule
   TypeOrmCoreModule-->ConfigModule
+  TypeOrmCoreModule-->EventEmitterModule
   TypeOrmCoreModule-->ScheduleModule
   TypeOrmModule-->ConfigHostModule
   TypeOrmModule-->ConfigModule
+  TypeOrmModule-->EventEmitterModule
   TypeOrmModule-->ScheduleModule
   TypeOrmModule-->TypeOrmCoreModule
   UsersModule-->ConfigHostModule
   UsersModule-->ConfigModule
+  UsersModule-->EventEmitterModule
   UsersModule-->ScheduleModule
   UsersModule-->TypeOrmCoreModule
   UsersModule-->TypeOrmModule
   WoocommerceModule-->ConfigHostModule
   WoocommerceModule-->ConfigModule
+  WoocommerceModule-->EventEmitterModule
   WoocommerceModule-->ScheduleModule
   WoocommerceModule-->TypeOrmCoreModule

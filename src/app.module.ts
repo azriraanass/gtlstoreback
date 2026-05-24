@@ -5,17 +5,20 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import config from '../ormconfig';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ProductsModule } from './products/products.module';
 import { SchedulerModule } from './scheduler/scheduler.module';
 import { ScheduleModule } from '@nestjs/schedule';
-import { CategoryModule } from './category/category.module';
+import { ChatbotModule } from './chatbot/chatbot.module';
+import { LaptopFinderModule } from './laptop-finder/laptop-finder.module';
+import { QdrantModule } from './qdrant/qdrant.module';
+import { OllamaModule } from './ollama/ollama.module';
+import { RagModule } from './rag/rag.module';
+import { EventEmitterModule } from '@nestjs/event-emitter';
 
 
 @Module({
   controllers: [AppController],
   providers: [AppService],
   imports: [AuthenticationModule, 
-    ProductsModule,
     SchedulerModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
@@ -24,6 +27,12 @@ import { CategoryModule } from './category/category.module';
     }),
     ConfigModule.forRoot({isGlobal: true}),
     ScheduleModule.forRoot(),
+    ChatbotModule,
+    LaptopFinderModule,
+    QdrantModule,
+    OllamaModule,
+    RagModule,
+    EventEmitterModule.forRoot(),
   ],
 })
 export class AppModule {}
